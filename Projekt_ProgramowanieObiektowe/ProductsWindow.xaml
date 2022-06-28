@@ -1,0 +1,24 @@
+﻿<Window x:Class="Projekt_ProgramowanieObiektowe.ProductsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt_ProgramowanieObiektowe"
+        mc:Ignorable="d"
+        Title="Products" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="productsGrid" ItemsSource="{Binding products}" HorizontalAlignment="Left" Height="189" Margin="129,93,0,0" VerticalAlignment="Top" Width="541" CanUserAddRows="False" SelectionChanged="ProductGridSelectionChanged" RowEditEnding="EditedRow" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Product ID" IsReadOnly="True" Binding="{Binding productID}"/>
+                <DataGridTextColumn Header="Product Name" Binding="{Binding productName}"/>
+                <DataGridTextColumn Header="Price" Binding="{Binding productPrice}"/>
+                <DataGridTextColumn Header="Discount" Binding="{Binding discount}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="AddProduct_Button" Content="AddProduct" HorizontalAlignment="Left" Margin="129,333,0,0" VerticalAlignment="Top" Width="110" Height="50" Click="AddProduct_Button_Click"/>
+        <Button x:Name="RefreshButton" Content="Refresh" HorizontalAlignment="Left" Margin="560,333,0,0" VerticalAlignment="Top" Width="110" Height="50" Click="RefreshButton_Click"/>
+        <Button x:Name="DeleteButton" Content="Delete Selected" HorizontalAlignment="Left" Margin="278,333,0,0" VerticalAlignment="Top" Width="111" Height="48" Click="DeleteButton_Click"/>
+        <Button x:Name="SaveChangesButton" Content="Save Changes" HorizontalAlignment="Left" Margin="423,333,0,0" VerticalAlignment="Top" Width="111" Height="48" Click="SaveChangesButton_Click"/>
+
+    </Grid>
+</Window>

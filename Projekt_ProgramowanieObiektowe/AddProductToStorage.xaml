@@ -1,0 +1,18 @@
+﻿<Window x:Class="Projekt_ProgramowanieObiektowe.AddProductToStorage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt_ProgramowanieObiektowe"
+        mc:Ignorable="d"
+        Title="AddProductToStorage" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="productGrid" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding products}" HorizontalAlignment="Left" Height="184" Margin="238,74,0,0" VerticalAlignment="Top" Width="151">
+            <DataGrid.Columns>
+                <DataGridTextColumn IsReadOnly="True" Header="Product ID" Binding="{Binding productID}"/>
+                <DataGridTextColumn IsReadOnly="True" Header="Product Name" Binding="{Binding productName}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
