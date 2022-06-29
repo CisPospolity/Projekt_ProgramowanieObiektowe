@@ -12,7 +12,7 @@ namespace Projekt_ProgramowanieObiektowe
     {
         public DbSet<Products> Products { get; set; }
         public DbSet<Receipts> Receipts { get; set; }
-        public DbSet<ProductsOnReceipt> ProductsOnReceipts { get; set; }
+        public DbSet<ProductsOnReceipt> ProductsOnReceipt { get; set; }
         public DbSet<Storage> Storage { get; set; }
         public string ConnectionString { get; }
         public TableContext(string connectionString)
@@ -22,23 +22,6 @@ namespace Projekt_ProgramowanieObiektowe
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(this.ConnectionString);
-        }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder
-                .Entity<ProductsOnReceipt>(
-                    eb =>
-                    {
-                        eb.HasNoKey();
-                    });
-            modelBuilder.Entity<Products>()
-                .HasOne<Storage>(p => p.Storage)
-                .WithOne(s => s.product)
-                .HasForeignKey<Storage>(s => s.productID);
-            modelBuilder.Entity<Storage>()
-                .HasOne<Products>(s => s.product)
-                .WithOne(p => p.Storage)
-                .HasForeignKey<Storage>(s => s.productID);
         }
     }
     public class Products
@@ -71,6 +54,9 @@ namespace Projekt_ProgramowanieObiektowe
 
         public int receiptID { get; set; }
         public Receipts receipt { get; set; }
+        public decimal amount { get; set; }
+        public decimal discount { get; set; }
+        public decimal sumPrice { get; set; }
     }
 
     public class Storage

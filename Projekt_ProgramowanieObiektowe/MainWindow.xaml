@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt_ProgramowanieObiektowe"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="300">
     <Grid>
-        <Button x:Name="showProducts" Content="Show Products" HorizontalAlignment="Left" Margin="42,226,0,0" VerticalAlignment="Top" Width="112" Height="44" Click="ShowProducts_Click"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Height="20" Margin="-44,-244,0,0" VerticalAlignment="Top" Width="19"/>
-        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="112" Margin="42,127,0,0" Height="44" Click="button1_Click"/>
+        <Button x:Name="showStorage" Content="Show Storage" HorizontalAlignment="Center" VerticalAlignment="Top" Width="112" Height="44" Click="showStorage_Click" Margin="90,90,90,0"/>
+        <Button x:Name="showProducts" Content="Show Products" HorizontalAlignment="Center" VerticalAlignment="Top" Width="112" Height="44" Click="ShowProducts_Click" Margin="90,180,90,0"/>
+        <Button x:Name="manageReceipts" Content="Manage Receipts " HorizontalAlignment="Center" VerticalAlignment="Top" Width="112" Height="44" Click="manageReceipts_Click" Margin="90,270,90,0"/>
     </Grid>
 </Window>

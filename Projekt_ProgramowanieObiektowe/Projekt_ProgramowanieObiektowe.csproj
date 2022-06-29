@@ -173,6 +173,10 @@
     <Compile Include="AddProductToStorage.xaml.cs">
       <DependentUpon>AddProductToStorage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ReceiptManager.cs" />
+    <Compile Include="ReceiptWindow.xaml.cs">
+      <DependentUpon>ReceiptWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StorageProduct.cs" />
     <Compile Include="StorageWindow.xaml.cs">
       <DependentUpon>StorageWindow.xaml</DependentUpon>
@@ -201,6 +205,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ProductsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReceiptWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

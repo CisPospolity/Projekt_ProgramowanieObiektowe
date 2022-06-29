@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.ComponentModel;
 
 namespace Projekt_ProgramowanieObiektowe
 {
@@ -29,9 +30,16 @@ namespace Projekt_ProgramowanieObiektowe
             productsGrid.Items.Refresh();
         }
 
+        private void Refresh(object sender, CancelEventArgs e)
+        {
+            productsGrid.ItemsSource = App.tc.Products.ToList();
+            productsGrid.Items.Refresh();
+        }
+
         private void AddProduct_Button_Click(object sender, RoutedEventArgs e)
         {
             AddProduct window = new AddProduct();
+            window.Closing += Refresh;
             window.ShowDialog();
         }
 

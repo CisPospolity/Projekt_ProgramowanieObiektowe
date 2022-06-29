@@ -14,8 +14,8 @@
                 <DataGridTextColumn Header="Amount" Binding="{Binding Amount}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="SaveButton" Content="Save Changes" HorizontalAlignment="Left" Margin="559,152,0,0" VerticalAlignment="Top" Width="122" Height="42" Click="SaveButton_Click"/>
-        <Button x:Name="AddToStorage" Content="Button" HorizontalAlignment="Left" Margin="559,226,0,0" VerticalAlignment="Top" Width="122" Height="42" Click="AddToStorage_Click"/>
+        <Button x:Name="SaveButton" Content="Save Changes" HorizontalAlignment="Left" Margin="559,152,0,0" VerticalAlignment="Top" Width="164" Height="42" Click="SaveButton_Click"/>
+        <Button x:Name="AddToStorage" Content="Add New Product To Storage" HorizontalAlignment="Left" Margin="559,226,0,0" VerticalAlignment="Top" Width="164" Height="42" Click="AddToStorage_Click"/>
 
     </Grid>
 </Window>

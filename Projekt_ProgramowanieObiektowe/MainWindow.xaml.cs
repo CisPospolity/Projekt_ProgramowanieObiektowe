@@ -35,9 +35,15 @@ namespace Projekt_ProgramowanieObiektowe
             window.ShowDialog();
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void showStorage_Click(object sender, RoutedEventArgs e)
         {
             StorageWindow window = new StorageWindow();
+            window.ShowDialog();
+        }
+
+        private void manageReceipts_Click(object sender, RoutedEventArgs e)
+        {
+            ReceiptWindow window = new ReceiptWindow();
             window.ShowDialog();
         }
     }

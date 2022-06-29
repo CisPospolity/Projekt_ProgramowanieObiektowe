@@ -36,19 +36,19 @@ namespace Projekt_ProgramowanieObiektowe
             string name = ProductName.Text;
             decimal price = -1;
 
-            if (decimal.TryParse(ProductPrice.Text.Replace(',','.'), out decimal priceResult))
+            if (decimal.TryParse(ProductPrice.Text.Replace('.',','), out decimal priceResult))
             {
                 price = priceResult;
             }
             else
             {
-                MessageBox.Show("Incorrect price", "Error!");
+                MessageBox.Show("Incorrect price format", "Error!");
                 return;
             }
 
             if(price <=0)
             {
-                MessageBox.Show("Incorrect price", "Error!");
+                MessageBox.Show("Price can't be lower than zero.", "Error!");
                 return;
             }
 
