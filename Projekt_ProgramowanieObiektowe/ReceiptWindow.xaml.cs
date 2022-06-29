@@ -54,5 +54,11 @@ namespace Projekt_ProgramowanieObiektowe
             receiptGrid.Items.Refresh();
 
         }
+
+        private void addNewReceipt_Click(object sender, RoutedEventArgs e)
+        {
+            NewReceiptWindow window = new NewReceiptWindow();
+            window.ShowDialog();
+        }
     }
 }

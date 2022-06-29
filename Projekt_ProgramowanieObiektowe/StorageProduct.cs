@@ -36,7 +36,6 @@ namespace Projekt_ProgramowanieObiektowe
             set
             {
                 storage.amount = value;
-                App.tc.Storage.Where(i => i.productID == id).First().amount = value;
             }
         }
     }
