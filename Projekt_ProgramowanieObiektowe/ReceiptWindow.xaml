@@ -20,6 +20,7 @@
         <Button x:Name="searchButton" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Width="74" Margin="364,153,0,0" Height="24" Click="searchButton_Click"/>
         <Label x:Name="receiptLabel" Content="Receipt ID:" HorizontalAlignment="Left" Margin="56,124,0,0" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="addNewReceipt" Content="Add New Receipt" HorizontalAlignment="Left" Margin="598,187,0,0" VerticalAlignment="Top" Width="120" Height="62" Click="addNewReceipt_Click"/>
+        <Button x:Name="closeButton" Content="Close" HorizontalAlignment="Left" Margin="598,293,0,0" VerticalAlignment="Top" Width="120" Height="62" Click="closeButton_Click" IsCancel="True"/>
 
     </Grid>
 </Window>

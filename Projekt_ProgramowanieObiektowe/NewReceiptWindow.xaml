@@ -17,7 +17,7 @@
         <TextBox x:Name="amountBox" HorizontalAlignment="Left" Height="22" Margin="288,88,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="label1" Content="Amount" HorizontalAlignment="Left" Margin="288,62,0,0" VerticalAlignment="Top" Width="86"/>
         <Button x:Name="addButton" Content="Add to receipt" HorizontalAlignment="Left" Margin="288,128,0,0" VerticalAlignment="Top" Width="120" Click="addButton_Click"/>
-        <DataGrid x:Name="basketGrid" ItemsSource="{Binding newReceipt}" CanUserAddRows="False" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="252" Margin="44,465,0,0" VerticalAlignment="Top" Width="485">
+        <DataGrid x:Name="basketGrid" ItemsSource="{Binding newReceipt}" CanUserAddRows="False" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="252" Margin="44,465,0,0" VerticalAlignment="Top" Width="485" SelectionChanged="basketSelectChange">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Product Name" IsReadOnly="True" Binding="{Binding ProductName}"/>
                 <DataGridTextColumn Header="Price" IsReadOnly="True" Binding="{Binding Price}"/>
@@ -26,7 +26,9 @@
                 <DataGridTextColumn Header="Total Price" IsReadOnly="True" Binding="{Binding SumPrice}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="createButton" Content="Create" HorizontalAlignment="Left" Margin="606,647,0,0" VerticalAlignment="Top" Width="140" Height="70" Click="createButton_Click"/>
+        <Button x:Name="createButton" Content="Create" HorizontalAlignment="Left" Margin="606,560,0,0" VerticalAlignment="Top" Width="140" Height="70" Click="createButton_Click"/>
+        <Button x:Name="deleteButton" Content="Delete Selected" HorizontalAlignment="Left" Margin="606,465,0,0" VerticalAlignment="Top" Width="140" Height="71" IsEnabled="False" Click="deleteButton_Click"/>
+        <Button x:Name="cancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="606,647,0,0" VerticalAlignment="Top" Width="140" Height="70" Click="cancelButton_Click" IsCancel="True"/>
 
     </Grid>
 </Window>

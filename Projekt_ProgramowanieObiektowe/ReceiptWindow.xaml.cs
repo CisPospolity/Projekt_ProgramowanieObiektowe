@@ -60,5 +60,10 @@ namespace Projekt_ProgramowanieObiektowe
             NewReceiptWindow window = new NewReceiptWindow();
             window.ShowDialog();
         }
+
+        private void closeButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

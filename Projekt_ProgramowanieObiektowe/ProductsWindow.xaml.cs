@@ -87,5 +87,10 @@ namespace Projekt_ProgramowanieObiektowe
                 App.tc.SaveChanges();
             }
         }
+
+        private void exitButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

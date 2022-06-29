@@ -15,10 +15,11 @@
                 <DataGridTextColumn Header="Discount" Binding="{Binding discount}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="AddProduct_Button" Content="AddProduct" HorizontalAlignment="Left" Margin="129,333,0,0" VerticalAlignment="Top" Width="110" Height="50" Click="AddProduct_Button_Click"/>
-        <Button x:Name="RefreshButton" Content="Refresh" HorizontalAlignment="Left" Margin="560,333,0,0" VerticalAlignment="Top" Width="110" Height="50" Click="RefreshButton_Click"/>
-        <Button x:Name="DeleteButton" Content="Delete Selected" HorizontalAlignment="Left" Margin="278,333,0,0" VerticalAlignment="Top" Width="111" Height="48" Click="DeleteButton_Click"/>
-        <Button x:Name="SaveChangesButton" Content="Save Changes" HorizontalAlignment="Left" Margin="423,333,0,0" VerticalAlignment="Top" Width="111" Height="48" Click="SaveChangesButton_Click"/>
+        <Button x:Name="AddProduct_Button" Content="Add Product" HorizontalAlignment="Left" Margin="129,333,0,0" VerticalAlignment="Top" Width="81" Height="50" Click="AddProduct_Button_Click"/>
+        <Button x:Name="RefreshButton" Content="Refresh" HorizontalAlignment="Left" Margin="482,333,0,0" VerticalAlignment="Top" Width="58" Height="50" Click="RefreshButton_Click"/>
+        <Button x:Name="DeleteButton" Content="Delete Selected" HorizontalAlignment="Left" Margin="250,333,0,0" VerticalAlignment="Top" Width="92" Height="48" Click="DeleteButton_Click"/>
+        <Button x:Name="SaveChangesButton" Content="Save Changes" HorizontalAlignment="Left" Margin="372,333,0,0" VerticalAlignment="Top" Width="82" Height="48" Click="SaveChangesButton_Click"/>
+        <Button x:Name="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="596,333,0,0" VerticalAlignment="Top" Width="74" Height="48" IsCancel="True" Click="exitButton_Click"/>
 
     </Grid>
 </Window>

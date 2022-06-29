@@ -60,5 +60,10 @@ namespace Projekt_ProgramowanieObiektowe
             window.ShowDialog();
             
         }
+
+        private void exitButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

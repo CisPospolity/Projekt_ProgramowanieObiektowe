@@ -128,5 +128,31 @@ namespace Projekt_ProgramowanieObiektowe
             MessageBox.Show("Added new receipt at ID: " + r.receiptID.ToString());
             this.Close();
         }
+
+        private void deleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            if(basketGrid.SelectedItem != null)
+            {
+                basketGrid.Items.Remove(basketGrid.SelectedItem);
+                basketGrid.SelectedIndex = -1;
+                deleteButton.IsEnabled = false;
+            }
+        }
+
+        private void basketSelectChange(object sender, SelectionChangedEventArgs e)
+        {
+            if(basketGrid.SelectedItem != null)
+            {
+                deleteButton.IsEnabled = true;
+            } else
+            {
+                deleteButton.IsEnabled = false;
+            }
+        }
+
+        private void cancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -11,7 +11,8 @@
         <Label x:Name="label" Content="Product Name:" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" Width="134"/>
         <TextBox x:Name="ProductPrice" PreviewTextInput="TextBox_PreviewTextInput" HorizontalAlignment="Left" Height="23" Margin="162,53,0,0" TextWrapping="Wrap" Text="Price" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="label1" Content="Price:" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="AddProductButton" Content="Add Product" HorizontalAlignment="Left" Margin="108,89,0,0" VerticalAlignment="Top" Width="75" Click="AddProductButton_Click"/>
+        <Button x:Name="AddProductButton" Content="Add Product" HorizontalAlignment="Left" Margin="51,89,0,0" VerticalAlignment="Top" Width="75" Click="AddProductButton_Click"/>
+        <Button x:Name="cancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="162,89,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Click="cancelButton_Click"/>
 
     </Grid>
 </Window>
