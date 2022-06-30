@@ -5,18 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt_ProgramowanieObiektowe"
         mc:Ignorable="d"
-        Title="Add Product To Storage" Height="310.5" Width="800">
+        Title="Add Product To Storage" ResizeMode="NoResize" Height="310" Width="700" Background="#FFDFF5F4">
     <Grid Margin="0,0,0,1">
-        <DataGrid x:Name="productGrid" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding products}" HorizontalAlignment="Left" Height="184" Margin="102,56,0,0" VerticalAlignment="Top" Width="261" SelectionChanged="GridSelectionChanges">
+        <DataGrid x:Name="productGrid" CanUserAddRows="False" AutoGenerateColumns="False" ItemsSource="{Binding products}" HorizontalAlignment="Left" Height="184" Margin="102,0,0,0" VerticalAlignment="Center" Width="261" SelectionChanged="GridSelectionChanges">
             <DataGrid.Columns>
                 <DataGridTextColumn IsReadOnly="True" Header="Product ID" Binding="{Binding productID}"/>
                 <DataGridTextColumn IsReadOnly="True" Header="Product Name" Binding="{Binding productName}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <TextBox x:Name="amountTextBox" HorizontalAlignment="Left" Height="23" Margin="574,43,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label" Content="Amount:" HorizontalAlignment="Left" Margin="438,39,0,0" VerticalAlignment="Top" Width="115"/>
-        <Button x:Name="toStorageButton" Content="Add Product to Storage" HorizontalAlignment="Left" Margin="490,118,0,0" VerticalAlignment="Top" Width="150" Height="68" Click="toStorageButton_Click" IsEnabled="False"/>
-        <Button x:Name="ExitButton" Content="Exit" HorizontalAlignment="Left" Margin="490,225,0,0" VerticalAlignment="Top" Width="76" Click="ExitButton_Click"/>
+        <TextBox x:Name="amountTextBox" HorizontalAlignment="Left" Height="23" Margin="552,51,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label" Content="Amount:" HorizontalAlignment="Left" Margin="416,47,0,0" VerticalAlignment="Top" Width="115"/>
+        <Button x:Name="toStorageButton" Content="Add Product to Storage" HorizontalAlignment="Left" Margin="420,0,0,0" VerticalAlignment="Center" Width="186" Height="68" Click="toStorageButton_Click" IsEnabled="False" Background="White" FontFamily="Copperplate Gothic Light">
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="ExitButton" Content="Exit" HorizontalAlignment="Left" Margin="420,214,0,0" VerticalAlignment="Top" Width="76" Click="ExitButton_Click" Background="White" FontFamily="Copperplate Gothic Light">
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
 
     </Grid>
 </Window>

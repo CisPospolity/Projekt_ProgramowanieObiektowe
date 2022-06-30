@@ -5,18 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt_ProgramowanieObiektowe"
         mc:Ignorable="d"
-        Title="Storage Window" Height="450" Width="800">
-    <Grid>
-        <DataGrid x:Name="storageGrid" CanUserAddRows="False" ItemsSource="{Binding products}" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="171" Margin="173,123,0,0" VerticalAlignment="Top" Width="283">
+        Title="Storage" ResizeMode="NoResize" Height="450" Width="620" Background="#FFE3F5F2">
+    <Grid Margin="0">
+        <DataGrid x:Name="storageGrid" CanUserAddRows="False" ItemsSource="{Binding products}" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="326" Margin="50,0,20,0" VerticalAlignment="Center" Width="283">
             <DataGrid.Columns>
                 <DataGridTextColumn IsReadOnly="True" Header="Product ID" Binding="{Binding id}"/>
                 <DataGridTextColumn IsReadOnly="True" Header="Product Name" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="Amount" Binding="{Binding Amount}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="SaveButton" Content="Save Changes" HorizontalAlignment="Left" Margin="559,136,0,0" VerticalAlignment="Top" Width="164" Height="42" Click="SaveButton_Click"/>
-        <Button x:Name="AddToStorage" Content="Add New Product To Storage" HorizontalAlignment="Left" Margin="559,200,0,0" VerticalAlignment="Top" Width="164" Height="42" Click="AddToStorage_Click"/>
-        <Button x:Name="exitButton" Content="Exit" HorizontalAlignment="Left" Margin="559,252,0,0" VerticalAlignment="Top" Width="164" Height="42" IsCancel="True" Click="exitButton_Click"/>
+        <Button x:Name="SaveButton" Content="Save Changes" Margin="364,0,0,0" VerticalAlignment="Center" Width="220" Height="42" Click="SaveButton_Click" Background="White" FontFamily="Copperplate Gothic Light" Padding="0" UseLayoutRounding="False">
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="AddToStorage" Content="Add New Product To Storage" Margin="364,0,0,200" VerticalAlignment="Center" Width="220" Height="42" Click="AddToStorage_Click" Background="White" FontFamily="Copperplate Gothic Light" Padding="0" UseLayoutRounding="False">
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="exitButton" Content="Exit" Margin="364,200,0,0" VerticalAlignment="Center" Width="220" Height="42" IsCancel="True" Click="exitButton_Click" Background="White" FontFamily="Copperplate Gothic Light" Padding="0" UseLayoutRounding="False">
+            <Button.Effect>
+                <DropShadowEffect ShadowDepth="2"/>
+            </Button.Effect>
+        </Button>
 
     </Grid>
 </Window>

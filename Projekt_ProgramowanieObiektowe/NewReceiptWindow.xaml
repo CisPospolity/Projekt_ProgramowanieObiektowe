@@ -5,30 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt_ProgramowanieObiektowe"
         mc:Ignorable="d"
-        Title="NewReceiptWindow" Height="800" Width="1000">
+        Title="Create a new receipt" Height="800" Width="794.5" Background="#FFDDF7F0">
     <Grid Margin="0,0,2,6">
-        <DataGrid x:Name="storageGrid" AutoGenerateColumns="False" ItemsSource="{Binding storage}" IsReadOnly="True" HorizontalAlignment="Left" Height="287" Margin="441,69,0,0" VerticalAlignment="Top" Width="189">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Product ID" Binding="{Binding id}"/>
-                <DataGridTextColumn Header="Product Name" Binding="{Binding Name}"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <Label x:Name="label" Content="Select Item From Storage" HorizontalAlignment="Left" Margin="441,38,0,0" VerticalAlignment="Top" Width="189"/>
-        <TextBox x:Name="amountBox" HorizontalAlignment="Left" Height="22" Margin="288,88,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label1" Content="Amount" HorizontalAlignment="Left" Margin="288,62,0,0" VerticalAlignment="Top" Width="86"/>
-        <Button x:Name="addButton" Content="Add to receipt" HorizontalAlignment="Left" Margin="288,128,0,0" VerticalAlignment="Top" Width="120" Click="addButton_Click"/>
-        <DataGrid x:Name="basketGrid" ItemsSource="{Binding newReceipt}" CanUserAddRows="False" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="252" Margin="44,465,0,0" VerticalAlignment="Top" Width="485" SelectionChanged="basketSelectChange">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Product Name" IsReadOnly="True" Binding="{Binding ProductName}"/>
-                <DataGridTextColumn Header="Price" IsReadOnly="True" Binding="{Binding Price}"/>
-                <DataGridTextColumn Header="Discount" IsReadOnly="True" Binding="{Binding Discount}"/>
-                <DataGridTextColumn Header="Amount" Binding="{Binding Amount}"/>
-                <DataGridTextColumn Header="Total Price" IsReadOnly="True" Binding="{Binding SumPrice}"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <Button x:Name="createButton" Content="Create" HorizontalAlignment="Left" Margin="606,560,0,0" VerticalAlignment="Top" Width="140" Height="70" Click="createButton_Click"/>
-        <Button x:Name="deleteButton" Content="Delete Selected" HorizontalAlignment="Left" Margin="606,465,0,0" VerticalAlignment="Top" Width="140" Height="71" IsEnabled="False" Click="deleteButton_Click"/>
-        <Button x:Name="cancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="606,647,0,0" VerticalAlignment="Top" Width="140" Height="70" Click="cancelButton_Click" IsCancel="True"/>
+        <Grid Margin="0,97,0,0" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <DataGrid x:Name="storageGrid" AutoGenerateColumns="False" ItemsSource="{Binding storage}" IsReadOnly="True" HorizontalAlignment="Left" Height="287" VerticalAlignment="Top" Width="188" Margin="232,31,0,0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Product ID" Binding="{Binding id}"/>
+                    <DataGridTextColumn Header="Product Name" Binding="{Binding Name}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label x:Name="label" Content="Select Item From Storage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="188" Margin="232,0,0,0"/>
+            <TextBox x:Name="amountBox" HorizontalAlignment="Left" Height="22" Margin="0,54,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="label1" Content="Amount" HorizontalAlignment="Left" Margin="0,28,0,0" VerticalAlignment="Top" Width="86"/>
+            <Button x:Name="addButton" Content="Add to receipt" HorizontalAlignment="Left" Margin="0,94,0,0" VerticalAlignment="Top" Width="120" Click="addButton_Click" FontFamily="Copperplate Gothic Light" Background="White">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="2"/>
+                </Button.Effect>
+            </Button>
+        </Grid>
+        <Grid Margin="0,465,0,46" HorizontalAlignment="Center">
+            <DataGrid x:Name="basketGrid" ItemsSource="{Binding newReceipt}" CanUserAddRows="False" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="252" VerticalAlignment="Top" Width="485" SelectionChanged="basketSelectChange">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Product Name" IsReadOnly="True" Binding="{Binding ProductName}"/>
+                    <DataGridTextColumn Header="Price" IsReadOnly="True" Binding="{Binding Price}"/>
+                    <DataGridTextColumn Header="Discount" IsReadOnly="True" Binding="{Binding Discount}"/>
+                    <DataGridTextColumn Header="Amount" Binding="{Binding Amount}"/>
+                    <DataGridTextColumn Header="Total Price" IsReadOnly="True" Binding="{Binding SumPrice}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button x:Name="createButton" Content="Create" HorizontalAlignment="Left" Margin="562,95,0,0" VerticalAlignment="Top" Width="140" Height="70" Click="createButton_Click" FontFamily="Copperplate Gothic Light" Background="White">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="2"/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="deleteButton" Content="Delete Selected" HorizontalAlignment="Left" Margin="562,0,0,0" VerticalAlignment="Top" Width="140" Height="71" IsEnabled="False" Click="deleteButton_Click" Background="White" FontFamily="Copperplate Gothic Light">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="2"/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="cancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="562,182,0,0" VerticalAlignment="Top" Width="140" Height="70" Click="cancelButton_Click" IsCancel="True" FontFamily="Copperplate Gothic Light" Background="White">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="2"/>
+                </Button.Effect>
+            </Button>
+
+        </Grid>
 
     </Grid>
 </Window>

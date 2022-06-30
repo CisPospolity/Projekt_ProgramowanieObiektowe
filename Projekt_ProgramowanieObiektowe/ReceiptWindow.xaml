@@ -5,22 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt_ProgramowanieObiektowe"
         mc:Ignorable="d"
-        Title="ReceiptWindow" Height="450" Width="800">
+        Title="Receipts" ResizeMode="NoResize" Height="450" Width="800" Background="#FFD8F5F1">
     <Grid>
-        <DataGrid x:Name="receiptGrid" AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding productsOnReceipt}" HorizontalAlignment="Left" Height="168" Margin="56,187,0,0" VerticalAlignment="Top" Width="382">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Purchase Time" Binding="{Binding PurchaseTime}"/>
-                <DataGridTextColumn Header="Product Name" Binding="{Binding ProductName}"/>
-                <DataGridTextColumn Header="Amount" Binding="{Binding Amount}"/>
-                <DataGridTextColumn Header="Discount" Binding="{Binding Discount}"/>
-                <DataGridTextColumn x:Name="sumPrice" Header="Sumaric Price" Binding="{Binding SumPrice}"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <TextBox x:Name="receiptIDBox" HorizontalAlignment="Left" Height="24" Margin="56,156,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="searchButton" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Width="74" Margin="364,153,0,0" Height="24" Click="searchButton_Click"/>
-        <Label x:Name="receiptLabel" Content="Receipt ID:" HorizontalAlignment="Left" Margin="56,124,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="addNewReceipt" Content="Add New Receipt" HorizontalAlignment="Left" Margin="598,187,0,0" VerticalAlignment="Top" Width="120" Height="62" Click="addNewReceipt_Click"/>
-        <Button x:Name="closeButton" Content="Close" HorizontalAlignment="Left" Margin="598,293,0,0" VerticalAlignment="Top" Width="120" Height="62" Click="closeButton_Click" IsCancel="True"/>
+        <Grid Margin="50,0,360,0" VerticalAlignment="Center">
+            <DataGrid x:Name="receiptGrid" AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding productsOnReceipt}" HorizontalAlignment="Left" Height="253" Margin="0,64,0,0" VerticalAlignment="Top" Width="382">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Purchase Time" Binding="{Binding PurchaseTime}"/>
+                    <DataGridTextColumn Header="Product Name" Binding="{Binding ProductName}"/>
+                    <DataGridTextColumn Header="Amount" Binding="{Binding Amount}"/>
+                    <DataGridTextColumn Header="Discount" Binding="{Binding Discount}"/>
+                    <DataGridTextColumn x:Name="sumPrice" Header="Sumaric Price" Binding="{Binding SumPrice}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <TextBox x:Name="receiptIDBox" HorizontalAlignment="Left" Height="24" Margin="0,32,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+            <Button x:Name="searchButton" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Width="74" Margin="308,30,0,0" Height="24" Click="searchButton_Click" Background="White" FontFamily="Copperplate Gothic Light">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="2"/>
+                </Button.Effect>
+            </Button>
+            <Label x:Name="receiptLabel" Content="Receipt ID:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120"/>
+        </Grid>
+        <Grid Margin="552,0,120,0" VerticalAlignment="Center">
+            <Button x:Name="addNewReceipt" Content="Add New Receipt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="62" Click="addNewReceipt_Click" FontFamily="Copperplate Gothic Light" Background="White">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="2"/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="closeButton" Content="Close" HorizontalAlignment="Left" Margin="0,106,0,0" VerticalAlignment="Top" Width="120" Height="62" Click="closeButton_Click" IsCancel="True" FontFamily="Copperplate Gothic Light" Background="White">
+                <Button.Effect>
+                    <DropShadowEffect ShadowDepth="2"/>
+                </Button.Effect>
+            </Button>
+
+        </Grid>
 
     </Grid>
 </Window>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt_ProgramowanieObiektowe"
         mc:Ignorable="d"
-        Title="AddProduct" Height="150" Width="300">
+        Title="Add Product" Height="150" Width="300">
     <Grid>
         <TextBox x:Name="ProductName" HorizontalAlignment="Left" Height="23" Margin="162,12,0,0" TextWrapping="Wrap" Text="Product Name" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="label" Content="Product Name:" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" Width="134"/>
