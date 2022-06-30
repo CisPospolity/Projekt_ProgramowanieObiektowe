@@ -27,6 +27,7 @@ namespace Projekt_ProgramowanieObiektowe
             InitializeComponent();
             RefreshView();
         }
+        //Refresh data grid by querying items from joined table products and storage
         private void RefreshView()
         {
             products =
@@ -43,16 +44,31 @@ namespace Projekt_ProgramowanieObiektowe
             storageGrid.Items.Refresh();
         }
 
+        /// <summary>
+        /// Refreah items on clicking a button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RefreshView(object sender, CancelEventArgs e)
         {
             RefreshView();
         }
+        /// <summary>
+        /// Save changes to database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             App.tc.SaveChanges();
             RefreshView();
         }
 
+        /// <summary>
+        /// Open window for adding new item to storage and refresh after closing it
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddToStorage_Click(object sender, RoutedEventArgs e)
         {
             AddProductToStorage window = new AddProductToStorage();
@@ -61,6 +77,11 @@ namespace Projekt_ProgramowanieObiektowe
             
         }
 
+        /// <summary>
+        /// Close the window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void exitButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

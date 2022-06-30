@@ -28,18 +28,33 @@ namespace Projekt_ProgramowanieObiektowe
             
         }
 
+        /// <summary>
+        /// Open Products Window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ShowProducts_Click(object sender, RoutedEventArgs e)
         {
             ProductsWindow window = new ProductsWindow();
             window.ShowDialog();
         }
 
+        /// <summary>
+        /// Open Storage window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void showStorage_Click(object sender, RoutedEventArgs e)
         {
             StorageWindow window = new StorageWindow();
             window.ShowDialog();
         }
 
+        /// <summary>
+        /// Open Receipt Window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void manageReceipts_Click(object sender, RoutedEventArgs e)
         {
             ReceiptWindow window = new ReceiptWindow();

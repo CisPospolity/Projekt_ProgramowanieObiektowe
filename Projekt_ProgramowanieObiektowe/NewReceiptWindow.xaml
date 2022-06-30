@@ -15,7 +15,7 @@
                 </DataGrid.Columns>
             </DataGrid>
             <Label x:Name="label" Content="Select Item From Storage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="188" Margin="232,0,0,0"/>
-            <TextBox x:Name="amountBox" HorizontalAlignment="Left" Height="22" Margin="0,54,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="amountBox" PreviewTextInput="TextBox_PreviewTextInput" HorizontalAlignment="Left" Height="22" Margin="0,54,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"/>
             <Label x:Name="label1" Content="Amount" HorizontalAlignment="Left" Margin="0,28,0,0" VerticalAlignment="Top" Width="86"/>
             <Button x:Name="addButton" Content="Add to receipt" HorizontalAlignment="Left" Margin="0,94,0,0" VerticalAlignment="Top" Width="120" Click="addButton_Click" FontFamily="Copperplate Gothic Light" Background="White">
                 <Button.Effect>

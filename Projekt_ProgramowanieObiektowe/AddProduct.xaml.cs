@@ -25,12 +25,22 @@ namespace Projekt_ProgramowanieObiektowe
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Function that checks if decimal number is inputed into text box
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             Regex regex = new Regex("^[.][0-9]+$|^[0-9]*[.]{0,1}[0-9]*$");
             e.Handled = !regex.IsMatch((sender as TextBox).Text.Insert((sender as TextBox).SelectionStart, e.Text));
         }
 
+        /// <summary>
+        /// After clicking button this function will check if input is correct, then add product to database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddProductButton_Click(object sender, RoutedEventArgs e)
         {
             string name = ProductName.Text;
@@ -58,6 +68,11 @@ namespace Projekt_ProgramowanieObiektowe
             this.Close();
         }
 
+        /// <summary>
+        /// Function that closes the window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

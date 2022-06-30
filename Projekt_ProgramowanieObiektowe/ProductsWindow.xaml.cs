@@ -30,12 +30,22 @@ namespace Projekt_ProgramowanieObiektowe
             productsGrid.Items.Refresh();
         }
 
+        /// <summary>
+        /// Refresh items in ItemGrid
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Refresh(object sender, CancelEventArgs e)
         {
             productsGrid.ItemsSource = App.tc.Products.ToList();
             productsGrid.Items.Refresh();
         }
 
+        /// <summary>
+        /// Open Window for adding new product and refresh items after closing it.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddProduct_Button_Click(object sender, RoutedEventArgs e)
         {
             AddProduct window = new AddProduct();
@@ -43,14 +53,21 @@ namespace Projekt_ProgramowanieObiektowe
             window.ShowDialog();
         }
 
+        /// <summary>
+        /// Refresh items after clicking button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RefreshButton_Click(object sender, RoutedEventArgs e)
         {
-
-            productsGrid.ItemsSource = App.tc.Products.ToList();
             productsGrid.Items.Refresh();
-
         }
 
+        /// <summary>
+        /// Change button activity after selecting an item
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProductGridSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             selectedProduct = productsGrid.SelectedItem as Products;
@@ -64,6 +81,11 @@ namespace Projekt_ProgramowanieObiektowe
             }
         }
 
+        /// <summary>
+        /// Delete product from database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
             App.tc.Products.Remove(selectedProduct);
@@ -80,6 +102,11 @@ namespace Projekt_ProgramowanieObiektowe
             wasChanged = true;
         }
 
+        /// <summary>
+        /// Save changes in database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SaveChangesButton_Click(object sender, RoutedEventArgs e)
         {
             if(wasChanged)
@@ -88,6 +115,11 @@ namespace Projekt_ProgramowanieObiektowe
             }
         }
 
+        /// <summary>
+        /// Close window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void exitButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

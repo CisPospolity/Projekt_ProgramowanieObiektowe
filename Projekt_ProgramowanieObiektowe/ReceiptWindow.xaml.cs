@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Text.RegularExpressions;
 
 namespace Projekt_ProgramowanieObiektowe
 {
@@ -26,8 +27,14 @@ namespace Projekt_ProgramowanieObiektowe
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Search receipt from id
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void searchButton_Click(object sender, RoutedEventArgs e)
         {
+            //Check if input is correct
             if(int.TryParse(receiptIDBox.Text, out int result))
             {
                 receiptID = result;
@@ -37,6 +44,7 @@ namespace Projekt_ProgramowanieObiektowe
                 return;
             }
 
+            //Query that shows product on receipt with specific ID
             productsOnReceipt =
                 (from por in App.tc.ProductsOnReceipt
                  join receipt in App.tc.Receipts on por.receiptID equals receipt.receiptID
@@ -54,13 +62,27 @@ namespace Projekt_ProgramowanieObiektowe
             receiptGrid.Items.Refresh();
 
         }
-
+        private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("^[0-9]*$");
+            e.Handled = !regex.IsMatch((sender as TextBox).Text.Insert((sender as TextBox).SelectionStart, e.Text));
+        }
+        /// <summary>
+        /// Open window for adding new receipt
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void addNewReceipt_Click(object sender, RoutedEventArgs e)
         {
             NewReceiptWindow window = new NewReceiptWindow();
             window.ShowDialog();
         }
 
+        /// <summary>
+        /// Close window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void closeButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
