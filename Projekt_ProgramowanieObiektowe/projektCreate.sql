@@ -43,7 +43,7 @@ INSERT INTO Products(productName, productPrice) VALUES
 ('Jab³ko', 3.99),
 ('Czipsy', 5)
 
-INSERT INTO Receipts(purchateTime) VALUES
+INSERT INTO Receipts(purchaseTime) VALUES
 ('2022-04-28'),
 ('2022-01-01'),
 (getdate())

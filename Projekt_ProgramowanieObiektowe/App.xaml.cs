@@ -14,7 +14,7 @@ namespace Projekt_ProgramowanieObiektowe
     /// </summary>
     public partial class App : Application
     {
-        static string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=Projekt_PO;Integrated Security=True";
+        static string connectionString = @"Data Source=localhost;Initial Catalog=Projekt_PO;Integrated Security=True";
         public static TableContext tc;
         private void Application_Startup(object sender, StartupEventArgs e)
         {
